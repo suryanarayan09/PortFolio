@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>contact</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" >
+</head>
+<body>
+    <section id="contact" class="bg-light">
+        <div class="container">
+            <h2>Get Your<span class="text-primary">Killer Website</span> Now </h2>
+            <div class="container">
+                <div class="mail-icon"><i class="fas fa-envelope"></i> </div>
+                <div class="form-box">
+                    <h3>Shoot Me a <span class="text-primary">Message</span> </h3>
+
+                    <form>
+                        <div class="form-group">
+                            <label>First Name</label>
+                            <input type="text" placeholder="Enter Your First name">
+                        </div>
+                        <div class="form-group">
+                            <label>Last Name</label>
+                            <input type="text" placeholder="Enter Your First name">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" placeholder="Enter Your Email">
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea rows="5" placeholder="Enter YOur Name"></textarea>
+                        </div>
+                        <input type="submit" value="Send Message" class="contact-btn">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

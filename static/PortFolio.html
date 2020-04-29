@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" >
+
+    <title>services</title>
+</head>
+<body>
+<nav id="navbar">
+    <h2><a href="#home"><span class="text-primary">Suryanarayan</span> Kumar</a> </h2>
+    <ul>
+        <li><a href="{%static 'my_resume.pdf'%}">my resume </a> </li>
+    </ul>
+</nav>
+<section id="services" class="bg-light">
+    <div class="container">
+        <h2> HEre is What<span class="text-primary">I Have To Offer</span> </h2>
+        <div class="boxes">
+            <div class="box">
+                <h3><span class="text-primary">Awesome Modern Website</span> </h3>
+                <div class="feature">
+                    <i class="fas fa-check"></i>Responsive Website
+                </div>
+                <div class="feature">
+                    <i class="fas fa-check"></i> Modern Layout Design
+                </div>
+                <div class="feature">
+                    <i class="fas fa-check"></i> Search Engine Optimization
+                </div>
+                <div class="feature">
+                    <i class="fas fa-check"></i> Browse Compatibility
+                </div>
+            </div>
+            <div class="box">
+                <h3><span class="text-primary">Free Hosting &amp; Maintenance</span> </h3>
+                <div class="feature">
+                    <i class="fas fa-check"></i>Free Domain Name
+                </div>
+                <div class="feature">
+                    <i class="fas fa-check"></i> Free Hosting
+                </div>
+                <div class="feature">
+                    <i class="fas fa-check"></i>Free ssl Certification
+                </div>
+                <div class="feature">
+                    <i class="fas fa-check"></i>Personal Assistance
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

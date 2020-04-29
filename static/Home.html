@@ -7,7 +7,7 @@
     <title>Suryanarayan Website</title>
     <base href="/">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'static/css/style.css' %}" >
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" >
 
 </head>
 
@@ -19,12 +19,19 @@
     <ul>
         <li><a href="#navbar">Home </a> </li>
         <li><a href="#about">About </a> </li>
-        <li><a href="#services">Services</a> </li>
+        <li><a href="services">Services</a> </li>
         <li><a href="#testomonials">Testimonials </a> </li>
-        <li><a href="#contact">Contact </a> </li>
-        <li><a href="http://www.google.com" ><i class="fas fa-facebook-f"></i></a> </li>
+        <li><a href="contact">Contact </a> </li>
+        {%if user.is_authenticated%}
+        <li><a href="userinfo/information"> update_Info </a> </li>
+        <li><a href="userinfo/dashboard">{{user.username}}</a> </li>
+        <li><a href="accounts/logout">Logout</a> </li>
+        {%else%}
 
-
+        <li><a href="http://www.linkedin.com/suraj-kumar-8013445" > ln </a> </li>
+        <li><a href="accounts/register">Register</a> </li>
+        <li><a href="accounts/login">Login</a> </li>
+        {%endif%}
 
     </ul>
 
@@ -63,7 +70,7 @@
 
                 </div>
                 <div class="about-image">
-                    <img src="../static/image/photo.png" alt="Picture of myself">
+                    <img src="{%static 'image/photo.png'%}" alt="Picture of myself">
                 </div>
             </div>
     </div>

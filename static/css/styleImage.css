@@ -1,0 +1,30 @@
+body{
+background: fff;
+}
+#photo .Image{
+    display: flex;
+}
+
+#photo .Image_box {
+    background: #fff;
+    flex: 1;
+    padding: 3rem;
+    margin: 0 3rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #d1d1d1;
+    font-size: 1.3rem;
+}
+
+#photo Image_box i {
+    color:#fff;
+    padding: 1rem;
+    background: #3693ff;
+    border-radius: 50%;
+    margin: 0 1rem;
+    margin-bottom: 2rem;
+}
+
+
+#photo .Image{
+	transformation: rotate(90deg)
+}

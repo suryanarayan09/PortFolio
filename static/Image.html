@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{%load static %}
+{%static "image" as BaseUrl %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/styleImage.css' %}" >
+    <title>My Image</title>
+</head>
+<body>
+
+<section id="photo">
+    <div class="Image">
+    {%for img in Img%}
+    <div class = "Image_box">
+        <img src="{{img.img.url}}" width="200" height="100" >
+        <div class="Image_subtitle">
+            <p>{{img.comment}}</p>
+        </div>
+        <div class="img_location">
+            <h4>{{img.dest}}</h4>
+        </div>
+    </div>
+    {% endfor %}
+    </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Information</title>
+</head>
+<body>
+<form class="form" action="information" method="post">
+        {% csrf_token%}
+        <input type="text" name="providingfield" placeholder="provide your talent field"><br>
+        <input type="text" name="subfield" placeholder="sub_field"><br>
+        <input type="submit">
+
+</form>
+</body>
+</html>
