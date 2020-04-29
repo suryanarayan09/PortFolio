@@ -3,7 +3,7 @@ body
 	margin: 0;
 	padding: 0;
 	font-family: sans-serif;
-	background: url(../image/suraj.jpg);
+	background: url(../image/suraj.jpg) no-repeat center center/cover;
 	background-size: cover;
 
 }

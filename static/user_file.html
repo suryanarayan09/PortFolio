@@ -1,16 +1,38 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Information</title>
+    <meta name="viewport" content="device-width, initial-scale=1.0">
+    <title>Services</title>
+    <base href="/">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}" >
 </head>
 <body>
-<form class="form" action="information" method="post">
-        {% csrf_token%}
-        <input type="text" name="providingfield" placeholder="provide your talent field"><br>
-        <input type="text" name="subfield" placeholder="sub_field"><br>
-        <input type="submit">
+<div class="box">
+        <h2>Services</h2>
+        <form action="accounts/information" method="post">
+            {%csrf_token%}
+            <div class="inputBox">
+                <input type="text" name="providingfield" required="">
+                <label>provide your talent field</label>
+            </div>
+            <div class="inputBox">
+                <input type="text" name="subfield" required="">
+                <label>sub_field</label>
+            </div>
+            <input type="submit" name="" value="Submit">
 
-</form>
+        </form>
+
+    </div>
+
+<!--footer-->
+
+<footer class="bg-dark">
+    <p>Copyright &copy; Suryanarayan Kumar 2019</p>
+</footer>
+
 </body>
 </html>
