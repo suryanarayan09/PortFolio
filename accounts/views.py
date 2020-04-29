@@ -17,11 +17,15 @@ def register(request):
         elif password!=password2:
             messages.info(request, 'password not matching')
             return redirect('register')
+        elif User.objects.filter(email=email):
+            messages.info(request,'email taken')
+            return redirect('register')
 
         else:
             user = User.objects.create_user(username=username, password=password, email=email, first_name=first_name,
                                             last_name=last_name)
             user.save()
+            auth.login(request,user)
             return redirect('/')
     else:
         return render(request,'Register.html')
@@ -29,8 +33,8 @@ def register(request):
 
 def login(request):
     if request.method=='POST':
-        username = request.POST('username')
-        password = request.POST('password')
+        username = request.POST['USERNAME']
+        password = request.POST['password']
         user = auth.authenticate(username=username,password=password)
 
         if user is not None:
@@ -42,3 +46,10 @@ def login(request):
 
     else:
         return render(request,'login.html')
+
+
+def logout(request):
+    auth.logout(request)
+    print(request.user.username)
+    return redirect('/')
+
