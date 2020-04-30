@@ -43,24 +43,24 @@ body{
     justify-content: space-between;
     background: #333;
     color:#fff;
-    padding: 1.5rem 8rem;
+    padding: 1rem 6rem;
     position: sticky;
     top: 0;
     z-index: 1;
-    border-bottom: 3px solid #3693ff;
+    border-bottom: 2px solid #3693ff;
 
 }
+#navbar h2 a{
+    color:#fff;
+    text-decoration: none;
+
+}
+
 
 #navbar ul {
     display: flex;
     align-item: center;
     list-style: none;
-
-}
-
-#navbar h2 a{
-    color:#fff;
-    text-decoration: none;
 
 }
 
@@ -78,11 +78,34 @@ body{
 #navbar li a:hover {
     background-color: #3693ff;
 }
+.sub-menu{
+    display: none;
+}
+#navbar ul li:hover .sub-menu{
+    display: block;
+    position: absolute;
+    color: #fff;
+    margin-top:10px;
+    margin-left: -10px;
+}
+#navbar ul li:hover .sub-menu ul{
+    display: block;
+    margin: 10px;
+}
+#navbar ul li:hover .sub-menu ul li{
+    width: 150px;
+    padding:1px;
+    background: transparent;
+    border-radius: 3px;
+    text-align: left;
+}
 
 /* showcase area */
 #showcase{
-    background: url(../static/image/suraj.jpg) no-repeat center center/cover;
-    height:91.7vh;
+    background: url(../image/suraj.jpg) no-repeat center center/cover;
+    background-size: cover;
+    background-position: center;
+    height:104.7vh;
 }
 .showcase-content{
     display: flex;
@@ -96,8 +119,7 @@ body{
     right: 0;
     background: rgba(0,0,0,0.6);
     color: #fff;
-    height: 97vh;
-
+    height:110.7vh;
 }
 
 .showcase-content h1{
@@ -132,10 +154,14 @@ body{
 /*section about*/
 
 #about #services h2{
+    padding: 10px;
     text-align: center;
     font-size:2rem;
     margin-bottom: 1rem;
 
+}
+#about h2{
+    margin-top: 4rem;
 }
 #about h3{
     text-align: center;
@@ -318,4 +344,11 @@ display: flex;
  /*footer*/
  footer {
     text-align: center;
+    padding: 2rem 2rem;
+    text-align: center;
+ }
+
+ /* Image.html */
+ #photo .Image {
+    transform: rotate(90deg);
  }
