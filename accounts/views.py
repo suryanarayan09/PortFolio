@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
+from UserInfo.models import *
 
 # Create your views here.
 def register(request):
@@ -26,6 +27,16 @@ def register(request):
                                             last_name=last_name)
             user.save()
             auth.login(request,user)
+            Portfolio = PortFolio.objects.filter(user=1)
+            for portfolio in Portfolio:
+                paragraph_about = portfolio.paragraph_about
+                showcase_content = portfolio.showcase_content
+                showcase_image = portfolio.showcase_image
+                about_image = portfolio.about_image
+            users = request.user
+            portfolio = PortFolio(user=users, paragraph_about=paragraph_about, showcase_content=showcase_content,
+                                  showcase_image=showcase_image, about_image=about_image)
+            portfolio.save()
             return redirect('/')
     else:
         return render(request,'Register.html')

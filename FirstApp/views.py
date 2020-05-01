@@ -1,16 +1,21 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .models import Image
+from UserInfo.models import *
 
+# PortFolio,image,ServiceBox,ShowcaseContent,ShowcaseImage,About,AboutImage
 # Create your views here.
 def home(request):
-    print(request.user.username)
-    return render(request, 'home.html')
+    if request.user.is_authenticated:
+        Portfolio = PortFolio.objects.filter(user=request.user)
+        return render(request,'home.html',{'Portfolio': Portfolio})
+    else:
+        Portfolio = PortFolio.objects.filter(user=1)
+        return render(request, 'home.html',{'Portfolio': Portfolio})
 
 def services(request):
     return render(request,'PortFolio.html')
 
 def image(request):
-
     Img = Image.objects.all()
     return render(request,'Image.html',{'Img': Img})
 

@@ -10,13 +10,27 @@ class PortFolio(models.Model):
     showcase_image= models.ImageField(upload_to="pics", default=None)
     about_image= models.ImageField(upload_to="pics", default=None)
 
+class About(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    paragraph_about = models.TextField(default=None)
 
-class Image(models.Model):
+class AboutImage(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    img = models.ImageField(upload_to="pics", default=None)
+
+class image(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     comment = models.CharField(max_length=200, default=None)
     dest = models.CharField(max_length=100, default=None)
     img = models.ImageField(upload_to="pics", default=None)
 
+class ShowcaseImage(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    img = models.ImageField(upload_to="pics", default=None)
+
+class ShowcaseContent(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    content = models.CharField(max_length=200,default=None)
 
 class ServiceBox(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='servicebox', null=True)

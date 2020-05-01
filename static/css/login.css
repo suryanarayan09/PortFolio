@@ -71,7 +71,7 @@ font-size: 12px;
 
 }
 
-.box input[type="submit"]{
+input[type="submit"]{
 background: transparent;
 border: none;
 outline: none;
@@ -83,4 +83,20 @@ border-radius:5px;
  
 
 }
+.button{
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    background: #3693ff;
+    color: #fff;
+    display: inline-block;
+    border: 1px solid #3693ff;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: color 0.6s, background 0.6s;
 
+}
+.button:hover{
+    background: #3693ff;
+    color: #fff;
+
+}

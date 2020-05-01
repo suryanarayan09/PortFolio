@@ -78,7 +78,7 @@ body{
 #navbar li a:hover {
     background-color: #3693ff;
 }
-.sub-menu{
+.sub-menu, .sub-menu-1{
     display: none;
 }
 #navbar ul li:hover .sub-menu{
@@ -88,21 +88,28 @@ body{
     margin-top:10px;
     margin-left: -10px;
 }
+ .sub-menu ul li:hover .sub-menu-1{
+    display:block;
+    position: right;
+    padding: 0 3rem;
+    color: #fff;
+ }
 #navbar ul li:hover .sub-menu ul{
     display: block;
     margin: 10px;
 }
 #navbar ul li:hover .sub-menu ul li{
     width: 150px;
-    padding:1px;
+    margin:15px;
+    padding:0;
     background: transparent;
     border-radius: 3px;
-    text-align: left;
+    text-align: center;
 }
 
 /* showcase area */
 #showcase{
-    background: url(../image/suraj.jpg) no-repeat center center/cover;
+    background: url(../image/pyhton.jpg) no-repeat center center/cover;
     background-size: cover;
     background-position: center;
     height:104.7vh;
